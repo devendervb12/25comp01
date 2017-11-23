@@ -1,8 +1,16 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="smax.ui.empReg.view.InitialPage"
 		 xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Title">
 		<content>
-	         <Button text="Register"/>
+	         <List items="{/ProductSet}">
+	           <items>
+	              <StandardListItem title="{ProductID}" 
+	              description="{Name}" type="Active"
+	              press="onItemPress"
+	              />
+	           </items>
+	         </List>
 		</content>
 	</Page>
 </core:View>

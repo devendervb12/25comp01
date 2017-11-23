@@ -9,14 +9,20 @@ sap.ui.core.UIComponent.extend("smax.ui.empReg.Component", {
 			 },
 			 routes : [
 				 {
-					 pattern : "abc",
+					 pattern : "",// when
 					 name : "firstView",
 					 viewName : "smax.ui.empReg.view.InitialPage",
 					 viewType : "XML",
 					 controlAggregation : "pages",
+					 controlId : "idApp"					 
+				 },
+				 {
+					 pattern : "prodDtl",
+					 name : "nameProdDtl",
+					 viewName : "smax.ui.empReg.view.ProductDetails",
+					 viewType : "XML",
 					 controlId : "idApp",
-					
-					 
+					 controlAggregation : "pages"
 				 }
 			 ]
 		 }
