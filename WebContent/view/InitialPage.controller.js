@@ -12,7 +12,7 @@ sap.ui.controller("smax.ui.empReg.view.InitialPage", {
 
 	},
 	onItemPress : function(){
-		this.getOwnerComponent().getRouter().navTo("nameProdDtl");
+this.getOwnerComponent().getRouter().navTo("nameProdDtl", {pid : 'HT-1001'});
 	}
 
 /**

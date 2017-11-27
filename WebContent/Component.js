@@ -5,24 +5,23 @@ sap.ui.core.UIComponent.extend("smax.ui.empReg.Component", {
 		rootView : "smax.ui.empReg.view.App",
 		routing : {
 			 config : {
-				 routerClass : "sap.m.routing.Router"
+				 routerClass : "sap.m.routing.Router",
+				 viewType : "XML",
+				 controlId : "idApp",
+				 controlAggregation : "pages"
 			 },
 			 routes : [
 				 {
 					 pattern : "",// when
 					 name : "firstView",
-					 viewName : "smax.ui.empReg.view.InitialPage",
-					 viewType : "XML",
-					 controlAggregation : "pages",
-					 controlId : "idApp"					 
+					 viewName : "smax.ui.empReg.view.InitialPage"
+									 
 				 },
 				 {
-					 pattern : "prodDtl",
+					 pattern : "prodDtl/{pid}",
 					 name : "nameProdDtl",
-					 viewName : "smax.ui.empReg.view.ProductDetails",
-					 viewType : "XML",
-					 controlId : "idApp",
-					 controlAggregation : "pages"
+					 viewName : "smax.ui.empReg.view.ProductDetails"
+					
 				 }
 			 ]
 		 }
