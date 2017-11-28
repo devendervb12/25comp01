@@ -5,10 +5,10 @@
 		<content>
 	         <List items="{/ProductSet}">
 	           <items>
-	              <StandardListItem title="{ProductID}" 
-	              description="{Name}" type="Active"
-	              press="onItemPress"
-	              />
+		              <StandardListItem title="{ProductID}" 
+		              description="{Name}" type="Active"
+		              press="onItemPress"
+		              />
 	           </items>
 	         </List>
 		</content>

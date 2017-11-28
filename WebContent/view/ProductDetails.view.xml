@@ -2,7 +2,12 @@
 		controllerName="smax.ui.empReg.view.ProductDetails" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Product Details">
 		<content>
-	
-		</content>
+		<ObjectHeader title="{ProductID}"
+		intro="{Name}" number="{Category}"/>
+		 
+	        <!--  <Text text="{/ProductID}"/>
+	         <Text text="{/Name}"/>
+	         <Text text="{/Category}"/>
+ -->		</content>
 	</Page>
 </core:View>

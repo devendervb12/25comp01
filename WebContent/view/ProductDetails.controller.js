@@ -7,9 +7,31 @@ sap.ui.controller("smax.ui.empReg.view.ProductDetails", {
 */
 	onInit: function() {
 		var router = this.getOwnerComponent().getRouter(this);
+		
+		var oController = this;
+		
 		router.getRoute("nameProdDtl").attachPatternMatched(function(evt){
-			evt.getParameters().arguments.pid;
-			debugger;
+			var productId = evt.getParameters().arguments.pid;
+			var serviceURL = "proxy/http/122.180.87.238:8000/sap/opu/odata/SAP/ZGW_BATCH25_PRODUCT_SRV"
+			var oModel = new sap.ui.model.odata.v2.ODataModel(serviceURL);
+			
+			oController.getView().setModel(oModel);
+			
+			oController.getView().bindElement("/ProductSet('"+productId+"')");
+			
+			
+		/*	oModel.read("/ProductSet('"+productId+"')", {
+				success : function(data){
+					//data is javascript object
+					var oModel = new sap.ui.model.json.JSONModel();					
+					oModel.setData(data);					
+					//set the model to view
+					oController.getView().setModel(oModel);},
+				error : function(){}
+			}*/
+			//);
+			
+			
 		});
 
 	},
